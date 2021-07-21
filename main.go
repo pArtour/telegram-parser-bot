@@ -1,7 +1,14 @@
-package telegram_parser_bot
+package main
 
-import "fmt"
+import (
+	"github.com/pArtour/telegram-parser-bot/actions"
+)
+
+var tags = []string{"it_immigration", "go", "career"}
+
 
 func main()  {
-	fmt.Println("Hi")
+	for _, tag := range tags {
+		actions.Action(tag)
+	}
 }
